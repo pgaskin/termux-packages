@@ -38,7 +38,6 @@ PACKAGES+=" libjpeg-turbo" # Needed by ghostscript.
 PACKAGES+=" gawk" # Needed by apr-util.
 PACKAGES+=" openssl"  # Needed to build rust.
 PACKAGES+=" gnupg" # Needed to verify downloaded debs.
-PACKAGES+=" jq" # Needed by bintray uploader script.
 PACKAGES+=" lua" # Needed to build luarocks package.
 PACKAGES+=" python-recommonmark" # Needed for LLVM-8 documentation.
 PACKAGES+=" jre8-openjdk-headless"
@@ -49,7 +48,7 @@ if [ "$(id -u)" = "0" ]; then
 else
 	SUDO="sudo"
 fi
-$SUDO pacman -Syq --noconfirm $PACKAGES
+$SUDO pacman -Syq --needed --noconfirm $PACKAGES
 
 . $(dirname "$(realpath "$0")")/properties.sh
 $SUDO mkdir -p $TERMUX_PREFIX

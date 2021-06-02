@@ -12,7 +12,6 @@ PACKAGES+=" python-is-python3"
 # Used by build-package.sh and CI/CD scripts.
 PACKAGES+=" curl"
 PACKAGES+=" gnupg"
-PACKAGES+=" jq"
 
 # Used for fetching package sources from Git repositories.
 PACKAGES+=" git"
@@ -26,6 +25,7 @@ PACKAGES+=" unzip"
 PACKAGES+=" autoconf"
 PACKAGES+=" automake"
 PACKAGES+=" autopoint"
+PACKAGES+=" autogen"
 PACKAGES+=" bison"
 PACKAGES+=" flex"
 PACKAGES+=" g++"
@@ -70,6 +70,15 @@ PACKAGES+=" bsdmainutils"
 
 # Needed by package ccnet.
 PACKAGES+=" valac"
+
+# Needed by package libgcrypt.
+PACKAGES+=" fig2dev"
+
+# Needed by package libidn2.
+PACKAGES+=" gengetopt"
+
+# Needed by package proxmark3-git.
+PACKAGES+=" swig"
 
 # Needed by package dbus-glib.
 PACKAGES+=" libdbus-1-dev"
@@ -165,6 +174,8 @@ PACKAGES+=" python3-xcbgen"
 PACKAGES+=" texlive-extra-utils"
 PACKAGES+=" xfce4-dev-tools"
 PACKAGES+=" xfonts-utils"
+PACKAGES+=" xutils-dev"
+PACKAGES+=" libdbus-glib-1-dev-bin"
 
 # Needed by packages in science repository
 PACKAGES+=" sqlite3"
